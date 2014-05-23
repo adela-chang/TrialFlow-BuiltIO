@@ -1,0 +1,382 @@
+Version 1.1.7
+Date: 14-Nov-2013
+
+New Features:
+
+	Built.Object: addHeader() function added
+	Built.Object: removeHeader() function added
+
+	Built.Query: addHeader() function added
+	Built.Query: removeHeader() function added
+	
+API deprecation and modifications:
+	
+	NONE
+
+
+Bug Fixes:	
+
+	NONE
+
+
+
+
+Version 1.1.6
+Date: 6-Nov-2013
+
+New Features:
+
+	Built.Object: getLocation() function added
+	
+API deprecation and modifications:
+	
+	NONE
+
+
+Bug Fixes:	
+
+	NONE
+
+
+
+Version 1.1.5
+Date: 25-Oct-2013
+
+New Features:
+
+	NONE
+	
+API deprecation and modifications:
+	
+	Built.Events: "http:done" event renamed to "http:end"
+	Built.Events: "upload:done" event renamed to "upload:end"
+
+
+Bug Fixes:	
+
+	postMessage: bug fix in message passing
+
+
+Version 1.1.4
+Date: 23-Oct-2013
+
+New Features:
+	
+	Built.User: property loginType added
+	
+	Built.Util: random() method added
+	Built.Util: trim() method added
+
+	Built.Events: new Events class added
+	Built.Events: now take multiple events (comma seperate) at a time for binding, unbinding and triggering events
+
+	Built.Object: events support added for (change , save, fetch, destroy) events
+
+	Built.Object: data validation support added
+
+	
+API deprecation and modifications:
+	
+	NONE
+
+Bug Fixes:	
+
+	Built.Promise: bug fix in reject() method
+	Built.Promise: bug fix in resolve() method
+
+	Built.Query: bug fix in only() method
+	Built.Query: bug fix in except() method
+
+
+
+
+Version 1.1.3
+Date: 10-Oct-2013
+
+New Features:
+	
+	Built.Role: setRoleUid() method added
+	Built.Role: setName() method added
+	Built.Role: getName() method added
+	
+API deprecation and modifications:
+	
+	NONE
+
+Bug Fixes:	
+
+	Built.Object: bug fix in initialization method  
+
+
+
+
+
+Version 1.1.2
+Date: 7-Oct-2013
+
+New Features:
+
+	Built.File: file upload support added for NodeJS
+	
+
+API deprecation and modifications:
+	
+	NONE
+
+Bug Fixes:	
+
+	Built.Object: bug fix in setACL() method
+
+	Built.Query: bug fix in setACL() method
+
+
+
+
+
+Version 1.1.1
+Date: 4-Oct-2013
+
+New Features:
+
+	Built.Application: fetchRoles() method added
+	
+
+
+API deprecation and modifications:
+
+	Built.Application: users() method renamed to fetchUsers()
+	Built.Application: getSettings() method renamed to fetchSettings()
+	
+	Built.File: class removed
+	Built.FileObject: class is renamed to Built.File
+
+	
+	Built.Role: class removed
+	Built.RoleObject: class is renamed to Built.Role
+
+
+Bug Fixes:	
+
+	Built.Object: bug fix in setUid() method. 
+
+	Built.Query; bug fix in cache policy CACHE_THEN_NETWORK
+
+
+
+
+Version 1.1.0
+Date: 26-Sep-2013
+
+New Features:
+	NONE
+
+API deprecation and modifications:
+
+	Built.FileObject: addFile() function renamed to setFile().
+	Built.Object: change in arguments.
+
+Bug Fixes:	
+
+	Built.Query: fix in or() and and() method.
+	Built: bug fix in httpRequest to execute error callback on network unavailable.
+	Built.Query: bug fix in response callback. 
+
+
+
+Version 1.0.9
+Date: 19-Sep-2013
+
+New Features:
+	Built.Cache: Cache class removed
+	
+	Built.Query: setCachePolicy() method added.
+
+	Built.Query: setModelType() method added.
+
+	Built.Object: enum ModelType added.
+
+
+API deprecation and modifications:
+
+	Built.Query: modelType() method deprecated
+
+	Built.Object: const BACKBONE, NATIVE, NONE depricated
+
+	Built.Role: Object class renamed to RoleObject.
+
+	Built.Role: now RoleObject is static method
+
+Bug Fixes:	
+
+	Built.File: bug fix in upload() method.
+
+	Built.FileObject: bug fix in save() method.
+
+
+
+Version 1.0.8
+Date: 11-Sep-2013
+
+New Features:
+	Built.Object: oldJSON() function added.
+
+	Built.Installation: new Built.Installation class added.
+
+	Built.Promise: done() function renamed to success().
+	Built.Promise: fail() function renamed to error().
+
+	Built: removeHeader() function added.
+	Built: removeTenant() function added.
+
+API deprecation and modifications:
+	Built.Object: now user is allowed to change uid of object.
+
+Bug Fixes:	
+	Built.FileObject: fix in save method.
+
+
+Version 1.0.7
+Date: 11-Sep-2013
+
+New Features:
+	Built.Promise: then() method added.
+	Built.Promise: successCallback and errorCallback in then() can be given using Promise#success and Promise#error.
+	Built.Promise: when() method added. 
+	Built.Promise: isFulfilled() function added.
+	Built.Promise: isPromise() function added.
+
+	Built.Object: BACKBONE, NONE, NATIVE properties added.
+	Built.Object: setACL() method also accept boolean false as a shorthand for disabling ACL.
+	
+	Built.FileObject: setACL() method also accept boolean false as a shorthand for disabling ACL.
+
+	Built.ACL: disable() function added.
+	Built.ACL: isDisabled() function added.
+
+API deprecation and modifications:
+	Built.Query: ModelType subclass removed.
+	Built.Query: modelType() function added.	
+
+	Built.Notification: message() function renamed to setMessage(). 
+
+Bug Fixes:	
+	NONE
+
+
+Version 1.0.6
+Date: 6-Sep-2013
+
+New Features:
+	Built.Query: ModelType subclass added for setting required model type for result data.
+	Built.Query: responseType property added in response arguments for ResponseType detection whether CACHE or NETWORK.
+	Built.Query: Built.Object to Backbone.Model conversion supported out of the box. 
+
+	Built.User: added update() method. 
+
+API deprecation and modifications:
+	Built.Object: also accept object without uid attribute while initialising.
+
+	Built.Query: select() method accept 3 parameters.
+	Built.Query: dontSelect() method accept 3 parameters.
+
+Bug Fixes:
+	Built.Query#Cache: fix in cacheThenNetwork() method.
+	Built.Query#Cache: fix in cacheElseNetwork() method.
+
+	Built.Extension: fix in execute() method.
+
+
+
+Version 1.0.5
+Date: 28-Aug-2013
+
+New Features:
+	Built: fallbackOnCrossDomainIssue() method added for better handling cross domain issue.
+	Built.Object: dirtyJSON() method added to get JSON representation of newly set attributes.
+
+API deprecation and modifications:
+	Built.Object: fix in get() method to get dirty (newly set) attributes.
+	Built.Analytics.Event: appendEvent() method extend to take events in batch.
+	Built.User: getSession() method return null if no session available.
+	Built.Extension: Built.Cloud class renamed to Built.Extension.
+
+Bug Fixes:
+	Built.ACL: bug fix in getPublicReadAccess() method.
+	Built.ACL: bug fix in getPublicWriteAccess() method.
+	Built.ACL: bug fix in getPublicDeleteAccess() method.
+	Built.ACL: bug fix in setPublicReadAccess() method.
+	Built.ACL: bug fix in setPublicWriteAccess() method.
+	Built.ACL: bug fix in setPublicDeleteAccess() method.
+
+
+Version 1.0.4
+Date: 20-Aug-2013
+
+New Features:
+	NONE
+
+API deprecation and modifications:
+	Built.Query: withInLocation() method renamed to withinLocation().
+	Built.Query: select() method accept 2 parameters.
+	Built.Query: dontSelect() method accept 2 parameters.
+	
+	Built.User: currentUser() method renamed to getCurrentUser().
+	Built.User: setSession() method renamed to setCurrentUser();
+
+Bug Fixes:
+	Built.Object: bug fix in toJSON() method.
+	Built.Object: bug fix in upsert() method.
+
+	Built.User: bug fix in login() method.
+
+	Built.Query: fix in select() method.
+	Built.Query: fix in dontSelect() method.
+
+
+
+
+Version 1.0.3
+Date: 08-Aug-2013
+
+New Features:
+	Built.User: added loginWithTwitter() function.
+
+API deprecation and modifications:
+	Built.User: requestResetPassword() function now accept 2 arguments first emailId {String} and second optional callback {Object}.
+	Built.User: forgotPassword() function renamed to requestResetPassword().
+
+	Built.Cloud: changes in execute() function to make compatible with new cloud code changes.
+	Built.Cloud: exec() function renamed to execute().
+
+Bug Fixes:
+	NONE
+
+
+
+
+Version 1.0.2
+Date: 31-July-2013
+
+New Features:
+	NONE
+
+API deprecation and modifications:
+	NONE
+
+Bug Fixes:
+	Built.Role: fix Built.Role#create(), method return RoleObject.
+
+
+
+
+Version 1.0.1
+Date: 07-July-2013
+
+New Features:
+	NONE
+
+API deprecation and modifications:
+	Built.Location: Built.GPSPoint class renamed to Built.Location
+
+Bug Fixes:
+	NONE
